@@ -12,3 +12,5 @@ add_executable(tameshi
     source/main.cpp)
 
 target_link_libraries(tameshi -pthread)
+
+install(TARGETS tameshi DESTINATION bin)

@@ -1,0 +1,11 @@
+[Unit]
+Description=Test program sending UDP packets
+After=multi-user.target
+
+[Service]
+ExecStartPre=/bin/sleep 5
+ExecStart=/urs/bin/tameshi -i 192.168.0.1 -p 30001
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
